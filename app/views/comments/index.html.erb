@@ -1,0 +1,17 @@
+<%= "Hello #{current_user.email}" %>
+
+<%= form_tag comments_path root_path method: :post do %>
+    <%= text_area_tag 'comment', nil %>
+    <br>
+    <%= submit_tag 'Save' %>
+<% end %>
+
+<ul>
+    <% @comments.each do |comment| %>
+        <li>
+            <%= comment.content %>
+        </li>
+    <% end %>
+</ul>
+
+<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
