@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <a class="navbar-brand" href="#"><h2>TwitterMaisEnFaitC'estPasTwitter</h2></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor03">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <% if user_signed_in? %>
+            <li>
+                <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+            </li>
+        <% else %>
+            <li>
+                <%= link_to('Login', new_user_session_url)  %>  
+            </li>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</nav>
