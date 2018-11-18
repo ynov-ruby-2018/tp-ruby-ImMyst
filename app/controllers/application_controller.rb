@@ -12,5 +12,10 @@ class ApplicationController < ActionController::Base
         end
     end
     helper_method :authenticate_user!
+    
+    # copier/coller depuis Stack Overflow© ça fait (souvent) parti du Job, mais sur ce point là
+    # désolé, c'est un hors sujet :-/
+    # La méhode "authenticate_user" est fournie par devise et se suffisait à elle même pour ce qu'il fallait faire
+    # Aucun besoin de faire quoi que ce soit de plus.
 
 end
